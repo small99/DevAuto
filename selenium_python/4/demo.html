@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>窗口试验专用</title>
+    <script type="text/javascript">
+    function display_alert()
+    {
+        alert("标准alert弹窗");
+    }
+
+    function disp_confirm()
+    {
+        var r=confirm("标准confirm弹窗")
+        if (r==true)
+        {
+            document.write("You pressed OK!");
+        }
+        else
+        {
+            document.write("You pressed Cancel!");
+        }
+    }
+
+    function disp_prompt(){
+        var name = prompt("请输入公众号名称:", "公众号开源优测");
+        if(name == null){
+            document.write("你点击了取消");
+        }
+        else{
+            document.write(name);
+        }
+    }
+
+    </script>
+</head>
+<body>
+<br><br>
+<input id="alert_id" type="button" onclick="display_alert()" value="alert弹窗"/>
+<br><br>
+<input id="confirm_id" type="button" onclick="disp_confirm()" value="confirm弹窗"/>
+<br><br>
+<input id="prompt_id" type="button" onclick="disp_prompt()" value="prompt弹窗"/>
+<input id="visibility_id" type="button" width="0" height="0" value="用于可见元素测试" hidden/>
+<br><br>
+<select id="select_id">
+    <option value="value_1">测试数据1</option>
+    <option value="value_2">测试数据2</option>
+    <option value="value_3">测试数据3</option>
+    <option value="value_4">测试数据4</option>
+    <option value="value_5">测试数据5</option>
+    <option value="value_6">测试数据6</option>
+</select>
+<br><br>
+<select id="multi_select_id" multiple="multiple" size="6">
+    <option value="value_1">测试数据1</option>
+    <option value="value_2">测试数据2</option>
+    <option value="value_3">测试数据3</option>
+    <option value="value_4">测试数据4</option>
+    <option value="value_5">测试数据5</option>
+    <option value="value_6">测试数据6</option>
+</select>
+<br><br>
+<a href="http://www.baidu.com" target="_blank">打开百度</a>
+<br>
+<hr>
+<iframe id="baidu" width="100%" src="http://www.baidu.com" />
+</body>
+</html>
